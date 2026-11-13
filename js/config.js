@@ -4,25 +4,25 @@
 
 const CONFIG = {
   // ---------- SUPABASE ----------
-  SUPABASE_URL: "https://SEU-PROJETO.supabase.co",
-  SUPABASE_ANON_KEY: "SUA_ANON_KEY_AQUI",
+  SUPABASE_URL: "https://fuyqclegbjiirjjnutnr.supabase.co",
+  SUPABASE_ANON_KEY: "sb_publishable_KrBAoVDtSGgTxegL6PWqAg_doOgMR3l",
 
   // ---------- LOJA ----------
   LOJA: {
     nome: "Reprografia do Povo",
     cidade: "Quelimane",
-    whatsapp: "258840000000",
-    email: "geral@reprografia.co.mz",
+    whatsapp: "258871632577",
+    email: "cleytoncasanova4@gmail.com",
     endereco: "Bairro Central, Quelimane, Zambézia",
-    horario: "Seg–Sáb · 07h30 – 21h00",
+    horario: "Seg–Dom · 07h30 – 21h00",
     taxaMaxPaginas: 500
   },
 
   // ---------- REDES SOCIAIS ----------
   REDES_SOCIAIS: {
-    facebook:  "https://facebook.com/reprografiadopovo",
-    instagram: "https://instagram.com/reprografiadopovo",
-    tiktok:    "https://tiktok.com/@reprografiadopovo",
+    facebook:  "https://facebook.com/cleytoncasanova",
+    instagram: "https://www.instagram.com/cleytoncasanova/profilecard/?igsh=Y2E0am1jMnk1ZmVq",
+    tiktok:    "https://www.tiktok.com/@cleytoncasanova3?_r=1&_t=ZS-9BMfluFTb52",
     whatsapp:  "258871632577",
     email:     "cleytoncasanova4@gmail.com"
   },

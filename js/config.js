@@ -48,11 +48,14 @@ const CONFIG = {
   // ---------- TAXA DE SERVIÇO ----------
   TAXA_SERVICO: 20,
 
-  // ---------- ADMIN ----------
+   // ---------- ADMIN ----------
+  // Login simples: só utilizador e senha.
+  // Para mudar, edita aqui — nada mais.
   ADMIN: {
-    email:     "admin@reprografia.co.mz",
-    sessaoKey: "repro_admin_sessao",
-    notifSom:  true
+    utilizador: "repro",         // ← nome de utilizador
+    senha:      "povo2026",      // ← senha
+    sessaoKey:  "repro_admin_logado",
+    notifSom:   true
   },
 
   // ---------- UI ----------

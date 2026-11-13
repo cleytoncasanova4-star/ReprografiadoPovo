@@ -52,8 +52,8 @@ const CONFIG = {
   // Login simples: só utilizador e senha.
   // Para mudar, edita aqui — nada mais.
   ADMIN: {
-    utilizador: "repro",         // ← nome de utilizador
-    senha:      "povo2026",      // ← senha
+    utilizador: "repro",        
+    senha:      "povo2026",     
     sessaoKey:  "repro_admin_logado",
     notifSom:   true
   },

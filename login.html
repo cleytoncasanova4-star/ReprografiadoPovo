@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Admin · Reprografia do Povo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="login-page">
+
+  <div class="login-box">
+    <div class="login-logo">
+      <span class="logo-mark">Rp</span>
+      <div>
+        <strong>Reprografia do Povo</strong>
+        <small>Painel Administrativo</small>
+      </div>
+    </div>
+    <h1>Acesso Restrito</h1>
+    <p>Introduz as credenciais para continuar.</p>
+
+    <form id="loginForm">
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="admin@reprografia.co.mz" autocomplete="username" />
+      </div>
+      <div class="form-field">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="••••••••" autocomplete="current-password" />
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg" style="width:100%;" id="btnLogin">Entrar →</button>
+      <p class="login-error" id="loginError"></p>
+    </form>
+
+    <a href="index.html" class="btn-voltar-checkout" style="margin-top:20px;">← Voltar ao site</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const cfg = window.CONFIG;
+      const { createClient } = supabase;
+      const sb = createClient(cfg.SUPABASE_URL, cfg.SUPABASE_ANON_KEY);
+
+      const { data: { session } } = await sb.auth.getSession();
+      if (session) { window.location.href = 'reproadm2026.html'; return; }
+
+      const form = document.getElementById('loginForm');
+      const err  = document.getElementById('loginError');
+      const btn  = document.getElementById('btnLogin');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        err.style.display = 'none';
+        btn.disabled = true;
+        btn.textContent = 'A entrar…';
+
+        const email = document.getElementById('email').value.trim();
+        const senha = document.getElementById('senha').value;
+
+        const { data, error } = await sb.auth.signInWithPassword({ email, password: senha });
+
+        if (error) {
+          err.textContent = '❌ ' + (error.message.includes('Invalid')
+            ? 'Credenciais inválidas.'
+            : error.message);
+          err.style.display = 'block';
+          btn.disabled = false;
+          btn.textContent = 'Entrar →';
+          return;
+        }
+        sessionStorage.setItem(cfg.ADMIN.sessaoKey, JSON.stringify({
+          ok: true, email: data.user.email, at: Date.now()
+        }));
+        window.location.href = 'reproadm2026.html';
+      });
+    });
+  </script>
+</body>
+</html>

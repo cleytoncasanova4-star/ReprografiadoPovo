@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout · Reprografia do Povo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pedido.css" />
+</head>
+<body class="pedido-page">
+
+  <header class="navbar scrolled">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">Rp</span>
+        <span class="logo-text">Reprografia <em>do Povo</em></span>
+      </a>
+      <a href="pedido.html" class="btn btn-ghost btn-sm">← Voltar</a>
+    </div>
+  </header>
+
+  <section class="pedido-header">
+    <div class="container">
+      <h1>Finalizar pedido</h1>
+      <p>Confirma os teus dados e envia pelo WhatsApp.</p>
+    </div>
+  </section>
+
+  <main class="checkout-main" id="checkoutMain">
+    <div class="container">
+
+      <div class="checkout-card">
+        <h2>👤 Os teus dados</h2>
+        <div class="form-field">
+          <label for="nome">Nome completo *</label>
+          <input type="text" id="nome" placeholder="Ex: João Silva" autocomplete="name" />
+        </div>
+        <div class="form-field">
+          <label for="telefone">Telefone / WhatsApp *</label>
+          <input type="tel" id="telefone" placeholder="Ex: 84 000 0000" autocomplete="tel" />
+        </div>
+      </div>
+
+      <div class="checkout-card">
+        <h2>🚚 Como queres receber?</h2>
+        <div class="modo-options" id="modoOptions">
+          <div class="modo-opt active" data-modo="retirada">
+            <span class="mo-icon">🏪</span>
+            <strong>Retirada</strong>
+            <small>Grátis · na loja</small>
+          </div>
+          <div class="modo-opt" data-modo="entrega">
+            <span class="mo-icon">🛵</span>
+            <strong>Entrega</strong>
+            <small>Taxa conforme zona</small>
+          </div>
+        </div>
+        <div id="zonaWrapper" style="display:none;">
+          <label style="font-size:13px;color:var(--muted);font-weight:600;">Escolhe a tua zona</label>
+          <div class="zonas-list" id="zonasList"></div>
+        </div>
+      </div>
+
+      <div class="checkout-card" id="trabalhoWrapper" style="display:none;">
+        <h2>📚 Detalhes do trabalho completo</h2>
+        <div id="trabalhoFields"></div>
+      </div>
+
+      <div class="checkout-card">
+        <h2>🧾 Resumo do pedido</h2>
+        <div class="resumo-itens" id="resumoItens"></div>
+        <div class="resumo-totais" id="resumoTotais"></div>
+      </div>
+
+      <button class="btn-wpp" id="btnEnviar" disabled>
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path d="M17.6 6.3A9.9 9.9 0 0 0 2 12a9.9 9.9 0 0 0 1.5 5.3L2 22l4.8-1.5A9.9 9.9 0 0 0 12 22a9.9 9.9 0 0 0 9.9-9.9c0-2.6-1-5.1-2.9-7zM12 20.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8.2 8.2 0 1 1 20.2 12 8.2 8.2 0 0 1 12 20.2z"/>
+        </svg>
+        <span id="btnEnviarTexto">Enviar pedido pelo WhatsApp</span>
+      </button>
+      <a href="pedido.html" class="btn-voltar-checkout">← Alterar itens</a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

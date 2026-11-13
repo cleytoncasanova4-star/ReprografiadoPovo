@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fazer Pedido · Reprografia do Povo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pedido.css" />
+</head>
+<body class="pedido-page">
+  <header class="navbar scrolled">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">Rp</span>
+        <span class="logo-text">Reprografia <em>do Povo</em></span>
+      </a>
+      <a href="index.html" class="btn btn-ghost btn-sm">← Voltar</a>
+    </div>
+  </header>
+
+  <section class="pedido-header">
+    <div class="container">
+      <h1>Escolhe os teus serviços</h1>
+      <p>Ajusta a quantidade e vê o total a atualizar em tempo real.</p>
+    </div>
+  </section>
+
+  <main class="pedido-main">
+    <div class="container">
+      <div id="produtosList" class="produtos-list"></div>
+    </div>
+  </main>
+
+  <div class="barra-total" id="barraTotal">
+    <div class="container barra-total-inner">
+      <div class="total-info">
+        <span class="total-label">Total do pedido</span>
+        <span class="total-value" id="totalValue">0 MT</span>
+      </div>
+      <button class="btn btn-primary btn-lg" id="btnContinuar" disabled>Continuar →</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/pedido.js"></script>
+</body>
+</html>

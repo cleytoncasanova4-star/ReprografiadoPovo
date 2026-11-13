@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel Admin · Reprografia do Povo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-page">
+
+  <header class="admin-topbar">
+    <div class="admin-container admin-topbar-inner">
+      <div class="admin-brand">
+        <span class="logo-mark">Rp</span>
+        <div>
+          <strong>Reprografia do Povo</strong>
+          <small>Painel Administrativo</small>
+        </div>
+      </div>
+      <div class="admin-topbar-actions">
+        <a href="index.html" target="_blank" class="btn btn-ghost btn-sm">🌐 Ver site</a>
+        <button class="btn btn-primary btn-sm" id="btnLogout">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-container" style="padding-top:30px;padding-bottom:60px;">
+
+    <section class="admin-section">
+      <h2 class="admin-h2">📊 Dashboard</h2>
+      <div class="cards-grid">
+        <div class="stat-card">
+          <span class="stat-icon">📦</span>
+          <div>
+            <span class="stat-label">Pedidos Hoje</span>
+            <span class="stat-value" id="statHoje">0</span>
+          </div>
+        </div>
+        <div class="stat-card stat-card--gold">
+          <span class="stat-icon">⏳</span>
+          <div>
+            <span class="stat-label">Pendentes</span>
+            <span class="stat-value" id="statPendentes">0</span>
+          </div>
+        </div>
+        <div class="stat-card stat-card--green">
+          <span class="stat-icon">💰</span>
+          <div>
+            <span class="stat-label">Faturado (hoje)</span>
+            <span class="stat-value" id="statFaturado">0 MT</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:12px;">
+        <button class="btn btn-ghost btn-sm" id="btnTestarSom">🔔 Testar som</button>
+      </div>
+    </section>
+
+    <section class="admin-section">
+      <h2 class="admin-h2">🎛️ Disponibilidade</h2>
+      <p class="admin-sub">Liga/desliga serviços. Desligado = bloqueado no site.</p>
+      <div class="switch-grid" id="switchGrid"></div>
+    </section>
+
+    <section class="admin-section">
+      <h2 class="admin-h2">📥 Pedidos Pendentes</h2>
+      <div id="pendentesList" class="pedidos-list"></div>
+    </section>
+
+    <section class="admin-section">
+      <h2 class="admin-h2">📜 Histórico</h2>
+      <div class="admin-actions-row">
+        <button class="btn btn-gold btn-sm" id="btnImprimirRelatorio">🖨️ Imprimir Relatório</button>
+        <button class="btn btn-primary btn-sm" id="btnFecharDia">🔒 Fechar o Dia</button>
+      </div>
+      <div class="table-wrapper">
+        <table class="hist-table">
+          <thead>
+            <tr><th>ID</th><th>Cliente</th><th>Total</th><th>Status</th><th>Data</th></tr>
+          </thead>
+          <tbody id="histBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

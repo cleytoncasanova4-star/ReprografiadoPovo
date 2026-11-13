@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reprografia do Povo · Quelimane</title>
+  <meta name="description" content="Cópias, impressões, encadernação e trabalhos completos em Quelimane. Rápido, barato e profissional." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">Rp</span>
+        <span class="logo-text">Reprografia <em>do Povo</em></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#servicos">Serviços</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#localizacao">Localização</a>
+      </nav>
+      <a href="pedido.html" class="btn btn-primary btn-sm nav-cta">Fazer Pedido</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#localizacao">Localização</a>
+      <a href="pedido.html" class="btn btn-primary">Fazer Pedido</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-inner">
+      <div class="hero-content fade-in">
+        <span class="badge">📍 Quelimane · Zambézia</span>
+        <h1 class="hero-title">
+          Cópias e impressões <span class="gradient-text">rápidas</span><br>
+          ao preço do <span class="gradient-text">povo</span>.
+        </h1>
+        <p class="hero-sub">
+          Pede em 2 minutos, recebe em casa ou retira na loja.
+          Preços justos, qualidade premium e atendimento humano.
+        </p>
+        <div class="hero-actions">
+          <a href="pedido.html" class="btn btn-primary btn-lg">🖨️ Fazer Pedido Agora</a>
+          <a href="#servicos" class="btn btn-ghost btn-lg">Ver Serviços</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>6</strong><span>Serviços</span></div>
+          <div><strong>2 MT</strong><span>Por página</span></div>
+          <div><strong>+500</strong><span>Clientes</span></div>
+        </div>
+      </div>
+      <div class="hero-visual fade-in">
+        <div class="floating-card card-1">
+          <span class="fc-icon">📄</span>
+          <div><strong>Cópia P&B</strong><small>2 MT / pág</small></div>
+        </div>
+        <div class="floating-card card-2">
+          <span class="fc-icon">🎨</span>
+          <div><strong>Impressão Colorida</strong><small>35 MT / pág</small></div>
+        </div>
+        <div class="floating-card card-3">
+          <span class="fc-icon">📚</span>
+          <div><strong>Trabalho Completo</strong><small>250 MT</small></div>
+        </div>
+        <div class="hero-blob"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="servicos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Nossos serviços</span>
+        <h2>Tudo o que precisas, num só lugar</h2>
+        <p>Escolhe entre cópias, impressões, encadernação ou pacotes completos.</p>
+      </div>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="como-funciona">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Simples assim</span>
+        <h2>Como funciona</h2>
+      </div>
+      <div class="steps">
+        <div class="step fade-in">
+          <div class="step-num">01</div>
+          <h3>Escolhe o serviço</h3>
+          <p>Seleciona o que precisas e a quantidade com os botões + / −.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-num">02</div>
+          <h3>Faz o checkout</h3>
+          <p>Escolhe entrega ou retirada, confirma o total.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-num">03</div>
+          <h3>Envia no WhatsApp</h3>
+          <p>O pedido chega direto ao nosso WhatsApp organizado.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-num">04</div>
+          <h3>Recebe em casa</h3>
+          <p>Entregamos em toda Quelimane ou retiras na loja.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="galeria">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Dentro da loja</span>
+        <h2>Um espaço feito para o povo</h2>
+      </div>
+      <div class="gallery" id="gallery">
+        <div class="gallery-item" data-img="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=1200">
+          <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=600" alt="Cópias" loading="lazy">
+        </div>
+        <div class="gallery-item" data-img="https://images.unsplash.com/photo-1568667256549-094345857637?w=1200">
+          <img src="https://images.unsplash.com/photo-1568667256549-094345857637?w=600" alt="Impressão" loading="lazy">
+        </div>
+        <div class="gallery-item" data-img="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200">
+          <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600" alt="Encadernação" loading="lazy">
+        </div>
+        <div class="gallery-item" data-img="https://images.unsplash.com/photo-1517842645767-c639042777db?w=1200">
+          <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=600" alt="Documentos" loading="lazy">
+        </div>
+        <div class="gallery-item" data-img="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1200">
+          <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600" alt="Escritório" loading="lazy">
+        </div>
+        <div class="gallery-item" data-img="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=1200">
+          <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600" alt="Impressora" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="localizacao">
+    <div class="container">
+      <div class="location-grid">
+        <div class="location-info fade-in">
+          <span class="eyebrow">Visita-nos</span>
+          <h2>Estamos no coração de Quelimane</h2>
+          <ul class="info-list">
+            <li><span>📍</span> Bairro Central, Quelimane · Zambézia</li>
+            <li><span>🕒</span> Seg–Sáb · 07h30 – 18h00</li>
+            <li><span>📞</span> +258 84 000 0000</li>
+            <li><span>✉️</span> geral@reprografia.co.mz</li>
+          </ul>
+          <a href="pedido.html" class="btn btn-primary">Fazer Pedido</a>
+        </div>
+        <div class="location-map fade-in">
+          <iframe src="https://www.google.com/maps?q=Quelimane,+Mo%C3%A7ambique&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">Rp</span>
+        <div>
+          <strong>Reprografia do Povo</strong>
+          <small>Quelimane · Desde 2024</small>
+        </div>
+      </div>
+
+      <div class="footer-social" id="footerSocial">
+        <!-- preenchido via js/app.js -->
+      </div>
+
+      <p class="footer-copy">© <span id="year"></span> Reprografia do Povo.</p>
+      <a href="login.html" class="footer-admin">Admin</a>
+    </div>
+  </footer>
+
+  <a href="#" class="whatsapp-float" id="whatsappFloat" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M17.6 6.3A9.9 9.9 0 0 0 2 12a9.9 9.9 0 0 0 1.5 5.3L2 22l4.8-1.5A9.9 9.9 0 0 0 12 22a9.9 9.9 0 0 0 9.9-9.9c0-2.6-1-5.1-2.9-7zM12 20.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8.2 8.2 0 1 1 20.2 12 8.2 8.2 0 0 1 12 20.2zm4.5-6.1c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1s-.6.8-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.3.1-.2 0-.4 0-.5l-.7-1.6c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/>
+    </svg>
+  </a>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">×</button>
+    <img id="lightboxImg" src="" alt="Galeria">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
